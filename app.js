@@ -41,7 +41,8 @@ app.get('/takeoff', function (req, res) {
 });
 
 app.get('/land', function (req, res) {
-    //res.send("land");
+    res.send("land");
+  return;
     client.stop();
     client.land();
 
