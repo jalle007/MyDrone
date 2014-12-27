@@ -1,0 +1,17 @@
+{
+  "name": "MyDrone",
+  "version": "0.0.0",
+  "description": "MyDrone",
+  "main": "app.js",
+  "author": {
+    "name": "jalle",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "stylus": "*",
+    "keypress": "*",
+    "socket.io": "*"
+  }
+}
