@@ -5,7 +5,10 @@
   "main": "app.js",
   "author": {
     "name": "jalle",
-    "email": ""
+    "email": "",
+      "engines": {
+    "node": "0.10.35"
+  }
   },
   "dependencies": {
     "express": "3.4.4",
