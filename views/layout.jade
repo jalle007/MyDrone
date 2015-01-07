@@ -22,15 +22,23 @@ html
               a(href='/about') About
             li
               a(href='/contact') Contact
-            li
-              a(href='/login') Login
-            li
-              a(href='/signup') Signup
+           span
+           span
+           if (!isAuth)
+               ul.nav.navbar-nav.navbar-right
+                li
+                  a(href='/login') Login
+                li
+                  a(href='/signup') Signup
+           if (isAuth)
+               ul.nav.navbar-nav.navbar-right
+                li
+                  a(href='/signout') Signout
     .container.body-content
       block content
       hr
       footer
-        p &copy; #{year} - My Express Application
+        p &copy; #{year} - Sample NodeJS Application
 
     script(src='/javascripts/jquery-1.10.2.js')
     script(src='/javascripts/bootstrap.js')

@@ -15,7 +15,7 @@ module.exports = function (passport) {
     
     /* GET  page. */
     router.get('/', function (req, res) {
-        res.render('index', { message: req.flash('message') });
+        res.render('index', { year: new Date().getFullYear(), message: req.flash('message'), isAuth: isAuthenticated});
     });
     
     /* GET login page. */
@@ -25,14 +25,14 @@ module.exports = function (passport) {
 
     /* GET about page. */
     router.get('/about', function (req, res) {
-        res.render('about', { title: 'About', year: new Date().getFullYear(), message: 'Your application description page.' });
+        res.render('about', { title: 'About', year: new Date().getFullYear(), message: 'Your application description page.', isAuth: isAuthenticated });
    });
     
     /* GET contact page. */
     router.get('/contact', function (req, res) {
         res.render('contact', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page.' });
     });
-    
+
     /* Handle Login POST */
     router.post('/login', passport.authenticate('login', {
         successRedirect: '/',
@@ -61,14 +61,9 @@ module.exports = function (passport) {
     router.get('/signout', function (req, res) {
         req.logout();
         res.redirect('/');
+        req.isAuthenticated = false;
+      //isAuthenticated = false;
     });
     
     return router;
 }
-
-
-
-
-
-
-

@@ -12,7 +12,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 
-app.use(morgan('combined'));
+//app.use(morgan('combined'));
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -30,6 +30,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 var dbConfig = require('./models/db');
 var mongoose = require('mongoose');
 mongoose.connect(dbConfig.url);
+var conn = mongoose.connection;
+
+conn.on('error', console.error.bind(console, 'connection error:'));
 
 // Configuring Passport
 var passport = require('passport');
@@ -44,8 +47,6 @@ app.use(flash());
 // Initialize Passport
 var initPassport = require('./passport/init');
 initPassport(passport);
-
-
 
 var routes = require('./routes/index')(passport);
 app.use('/', routes);
@@ -97,6 +98,17 @@ app.get('/spinright', function (req, res) {
 //        });
 //    });
 //}
+
+//setInterval(function () {
+//    //console.log('test');
+//    require('dns').resolve('www.google.com', function (err) {
+//        if (err)
+//            console.log('no connection');
+//        else
+//            console.log('connected');
+//});
+
+//}, 1 * 2 * 1000);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));

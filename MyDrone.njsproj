@@ -61,7 +61,7 @@
     <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="public\javascripts\jquery-1.10.2.min.map" />
     <Content Include="public\stylesheets\bootstrap.css" />
-    <Content Include="public\stylesheets\bootstrap.min.css" />
+    <Content Include="public\stylesheets\fonts.css" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.md" />
     <Content Include="TextFile1.txt" />
@@ -79,8 +79,8 @@
     <Folder Include="passport\" />
     <Folder Include="public\" />
     <Folder Include="public\fonts\" />
-    <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
+    <Folder Include="public\images\" />
     <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
     <Folder Include="views\" />
