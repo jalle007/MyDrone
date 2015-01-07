@@ -80,6 +80,21 @@ app.get('/spinright', function (req, res) {
     client.clockwise(0.5);
 });
 
+app.get('/moveleft', function (req, res) {
+    //res.send("moveleft");
+});
+app.get('/moveright', function (req, res) {
+    //res.send("moveright");
+});
+app.get('/moveup', function (req, res) {
+    //res.send("moveup");
+});
+app.get('/movedown', function (req, res) {
+    //res.send("movedown");
+});
+
+
+
 ///// catch 404 and forward to error handler
 //app.use(function (req, res, next) {
 //    var err = new Error('Not Found');

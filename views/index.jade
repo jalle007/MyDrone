@@ -4,28 +4,32 @@ block content
   .jumbotron
     h1 My Drone
     p.lead Fly Demo
-    table(style="text-align:center;")
+    table(style="text-align:center;" )
           tr
-            td 
+            td
                 a.btn.btn-primary.btn-large(href='/takeoff' style="margin-right: 10px;") ▲ TakeOff ▲
             td
                 a.btn.btn-primary.btn-large(href='/spinright') SpinRight ▶ 
             td
-                a.btn.btn-primary.btn-large(href='/spinright') ▲  
+                a.btn.btn-primary.btn-large(href='/moveup')
+                    img(src='../images/u.png'  ) 
           tr
             td
                 
-            td
+            td(style="padding-left: 30px;")
                  img(src='../images/spin.png'  ) 
-            td
-                a.btn.btn-primary.btn-large(href='/spinright') ◀
+            td(style="padding-left: 30px;")
+                a.btn.btn-primary.btn-large(href='/moveleft')
+                    img(src='../images/l.png'  ) 
                 img(src='../images/center.png'  ) 
-                a.btn.btn-primary.btn-large(href='/spinright') ▶
+                a.btn.btn-primary.btn-large(href='/moveright')
+                    img(src='../images/r.png'  ) 
           tr
             td
                 a.btn.btn-primary.btn-large(href='/land') ▼ Land ▼
             td
                a.btn.btn-primary.btn-large(href='/spinleft' style="margin-right: 10px;") ◀ SpinLeft           
             td
-               a.btn.btn-primary.btn-large(href='/spinright') ▼ 
+               a.btn.btn-primary.btn-large(href='/movedown')
+                    img(src='../images/d.png'  ) 
                   
