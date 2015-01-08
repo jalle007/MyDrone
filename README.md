@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-﻿# MyDrone
+MyDrone
 
+NodeJS is very modern Javascript framework that makes 
+building web  applications easy and fast. In this example we are using another technology which is the AR.Drone Parrot - drone aircraft which  is controlled by this web app.
 
-=======
-# MyDrone
-Examlple of NodeJS web ap for controling Drone
->>>>>>> 93088686c20e806ed922867d1dbcfa447efea47c
+Technologies used: NodeJS, MongoDB, AR.Drone API, Heroku hosting.
+Demo: mydrone.herokuapp.com
