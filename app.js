@@ -63,11 +63,11 @@ app.get('/takeoff', function (req, res) {
 });
 
 app.get('/land', function (req, res) {
-    res.send("land");
-  return;
+   
     client.stop();
     client.land();
-
+  return;
+ res.send("land");
 });
 
 app.get('/spinleft', function (req, res) {
@@ -81,6 +81,7 @@ app.get('/spinright', function (req, res) {
 });
 
 app.get('/moveleft', function (req, res) {
+    
     //res.send("moveleft");
 });
 app.get('/moveright', function (req, res) {
